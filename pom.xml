@@ -12,7 +12,7 @@
 	<artifactId>pac4j</artifactId>
 	<packaging>pom</packaging>
 	<name>pac4j</name>
-	<version>3.0.0-RC2-SNAPSHOT</version>
+	<version>3.1.0-SNAPSHOT</version>
 	<description>Profile &amp; Authentication Client for Java</description>
 	<url>https://github.com/pac4j/pac4j</url>
 
@@ -66,6 +66,7 @@
 		<spring.version>5.0.2.RELEASE</spring.version>
 		<spring.security.version>5.0.0.RELEASE</spring.security.version>
 		<shiro.version>1.4.0</shiro.version>
+        <jbcrypt.version>0.4.1</jbcrypt.version>
 		<mockito.version>2.13.0</mockito.version>
 		<slf4j.version>1.7.25</slf4j.version>
         <unboundid.version>4.0.3</unboundid.version>
@@ -119,6 +120,11 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.pac4j</groupId>
+                <artifactId>pac4j-jwt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
@@ -133,6 +139,11 @@
 				<artifactId>shiro-core</artifactId>
 				<version>${shiro.version}</version>
 			</dependency>
+            <dependency>
+                <groupId>de.svenkubiak</groupId>
+                <artifactId>jBCrypt</artifactId>
+                <version>${jbcrypt.version}</version>
+            </dependency>
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>

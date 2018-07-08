@@ -3,6 +3,14 @@ layout: doc
 title: Release notes&#58;
 ---
 
+**v3.1.0**:
+
+- Added attribute merging capabilities for user profile: multiple attributes with the same name and value of collection type can be merged into a single attribute
+
+**v3.0.1**:
+
+- The `ProfileHelper.flatIntoOneProfile` method returns an `AnonymousProfile` (instead of empty) if it's the only profile
+
 **v3.0.0**:
 
 - Handle AJAX requests in the OpenID Connect logout
@@ -15,8 +23,8 @@ title: Release notes&#58;
 - The SAML Keystore alias can be defined via a property; SAML date comparisons are now UTC-based
 - The client name is not set at the credential's level
 - The username of the `AzureAdProfile` is the UPN
-- The issue time is generated for a new JWT
-- The user profile can be expired (currently handled for AzureAD)
+- The issue time is generated and an expiration date can be used for a JWT
+- The OpenID Connect user profile can be expired
 - In the `J2EContext`, header names are checked in a case-insensitive way
 - Supports the `javax.faces.partial.ajax` parameter for AJAX requests
 - If only one client is defined in the configuration, it is used as a fallback on the security and callback endpoints
